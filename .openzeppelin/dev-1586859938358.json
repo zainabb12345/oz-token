@@ -1,0 +1,14 @@
+{
+  "contracts": {},
+  "solidityLibs": {},
+  "proxies": {
+    "oz-token/AbcToken": [
+      {
+        "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+        "kind": "NonProxy",
+        "bytecodeHash": "e740cecaebc23ec940697ba268a15bc99b0d1a9422f9a7a043725653fc680e49"
+      }
+    ]
+  },
+  "manifestVersion": "2.2"
+}
