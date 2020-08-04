@@ -1,17 +1,19 @@
 pragma solidity >=0.5.0 <0.7.0;
-
+import "./Initializable.sol";
 // Ownable contract from open zepplin libraray
 
-contract Ownable {
-    
+contract Ownable is Initializable{
     address private _owner;
 
-    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+    event OwnershipTransferred(
+        address indexed previousOwner,
+        address indexed newOwner
+    );
 
     /**
      * @dev Initializes the contract setting the deployer as the initial owner.
      */
-    constructor () public {
+    function initialize() public virtual initializer {
         _owner = msg.sender;
         emit OwnershipTransferred(address(0), _owner);
     }
@@ -46,7 +48,6 @@ contract Ownable {
      * thereby removing any functionality that is only available to the owner.
      */
 
-
     /**
      * @dev Transfers ownership of the contract to a new account (`newOwner`).
      * Can only be called by the current owner.
@@ -59,7 +60,10 @@ contract Ownable {
      * @dev Transfers ownership of the contract to a new account (`newOwner`).
      */
     function _transferOwnership(address _newOwner) internal {
-        require(_newOwner != address(0), "Ownable: new owner is the zero address");
+        require(
+            _newOwner != address(0),
+            "Ownable: new owner is the zero address"
+        );
         emit OwnershipTransferred(_owner, _newOwner);
         _owner = _newOwner;
     }
@@ -111,11 +115,10 @@ contract AbcToken is Ownable, ERC20{
     
     using SafeMath for uint256;
 
-
-    string  _name;
-    string  _symbol;
-    uint256 _totalSupply;
-    uint256 _decimal;
+    string  public name;
+    string  public symbol;
+    uint256 public _totalSupply;
+    uint256 public decimal;
     
     mapping(address => uint256) _balances;
     mapping(address => mapping (address => uint256)) _allowances;
@@ -123,11 +126,11 @@ contract AbcToken is Ownable, ERC20{
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
     event Transfer(address indexed from, address indexed to, uint tokens);
     
-    constructor() public {
-        _name = "ABC";
-        _symbol = "ABC";
-        _decimal = 6;
-        _totalSupply = 1000000 * 10 ** _decimal;
+    function initialize() initializer override public {
+        name = "ABC";
+        symbol = "ABC";
+        decimal = 6;
+        _totalSupply = 1000000 * 10 ** decimal;
         _balances[msg.sender] = _totalSupply;
     }
     

@@ -1,0 +1,159 @@
+{
+  "contracts": {
+    "AbcToken": {
+      "address": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+      "constructorCode": "608060405234801561001057600080fd5b506113c6806100206000396000f3fe",
+      "bodyBytecodeHash": "872f0d0828dd5ed2c5491640ce38d3dc58dc2c33476e1695228016bd15304597",
+      "localBytecodeHash": "35efd66dbc3606cabcd141a1c880f7cee07576eea06cf0561e1237fa17718f69",
+      "deployedBytecodeHash": "35efd66dbc3606cabcd141a1c880f7cee07576eea06cf0561e1237fa17718f69",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 571,
+          "type": "t_bool",
+          "src": "757:24:1"
+        },
+        {
+          "contract": "Initializable",
+          "path": "contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 573,
+          "type": "t_bool",
+          "src": "876:25:1"
+        },
+        {
+          "contract": "Initializable",
+          "path": "contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 638,
+          "type": "t_array:50<t_uint256>",
+          "src": "1982:29:1"
+        },
+        {
+          "contract": "Ownable",
+          "path": "contracts/Abc-Token.sol",
+          "label": "_owner",
+          "astId": 6,
+          "type": "t_address",
+          "src": "149:22:0"
+        },
+        {
+          "contract": "AbcToken",
+          "path": "contracts/Abc-Token.sol",
+          "label": "name",
+          "astId": 275,
+          "type": "t_string",
+          "src": "3378:19:0"
+        },
+        {
+          "contract": "AbcToken",
+          "path": "contracts/Abc-Token.sol",
+          "label": "symbol",
+          "astId": 277,
+          "type": "t_string",
+          "src": "3403:21:0"
+        },
+        {
+          "contract": "AbcToken",
+          "path": "contracts/Abc-Token.sol",
+          "label": "_totalSupply",
+          "astId": 279,
+          "type": "t_uint256",
+          "src": "3430:27:0"
+        },
+        {
+          "contract": "AbcToken",
+          "path": "contracts/Abc-Token.sol",
+          "label": "decimal",
+          "astId": 281,
+          "type": "t_uint256",
+          "src": "3463:22:0"
+        },
+        {
+          "contract": "AbcToken",
+          "path": "contracts/Abc-Token.sol",
+          "label": "_balances",
+          "astId": 285,
+          "type": "t_mapping<t_uint256>",
+          "src": "3496:37:0"
+        },
+        {
+          "contract": "AbcToken",
+          "path": "contracts/Abc-Token.sol",
+          "label": "_allowances",
+          "astId": 291,
+          "type": "t_mapping<t_uint256>",
+          "src": "3539:60:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "oz-token/AbcToken": [
+      {
+        "address": "0xA57B8a5584442B467b4689F1144D269d096A3daF",
+        "version": "1.0.0",
+        "implementation": "0x67B5656d60a809915323Bf2C40A8bEF15A152e3e",
+        "admin": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "dependencies": {
+    "@openzeppelin/contracts-ethereum-package": {
+      "package": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "version": "2.5.0",
+      "customDeploy": true
+    }
+  },
+  "version": "1.0.0",
+  "proxyAdmin": {
+    "address": "0x2612Af3A521c2df9EAF28422Ca335b04AdF3ac66"
+  }
+}

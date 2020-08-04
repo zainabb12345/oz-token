@@ -1,7 +1,11 @@
 {
   "manifestVersion": "2.2",
-  "contracts": {},
-  "dependencies": {},
+  "contracts": {
+    "AbcToken": "AbcToken"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-ethereum-package": "^2.5.0"
+  },
   "name": "oz-token",
   "version": "1.0.0",
   "compiler": {
